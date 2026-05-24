@@ -1,5 +1,5 @@
 #include <iostream>
-#include "report#03-5_SLinkedList(head).h"
+#include "SLinkedList(head).h"
 
 using namespace std;
 
@@ -8,7 +8,7 @@ SLinkedList::SLinkedList() {
 	count_ = 0;
 	tail_ = nullptr;
 }
-
+	
 SLinkedList::~SLinkedList() {
 	SNode* tNode = head_;
 	while (tNode) {
@@ -34,11 +34,11 @@ int SLinkedList::countNode() const {
 	return count_;
 }
 
-SNode* SLinkedList::frontNode() const {
+SNode * SLinkedList::frontNode() const {
 	return head_;
 }
 
-SNode* SLinkedList::rearNode() const {
+SNode * SLinkedList::rearNode() const {
 	/*if (isEmpty()) return nullptr;
 	SNode* rNode = head_;
 	while(rNode->link_) {
@@ -49,7 +49,7 @@ SNode* SLinkedList::rearNode() const {
 	return tail_;
 }
 
-void SLinkedList::addRear(const int& e) {
+void SLinkedList::addRear(const int & e) {
 	SNode* newNode = new SNode(e);
 	if (isEmpty()) {
 		head_ = newNode;
@@ -76,8 +76,8 @@ void SLinkedList::removeFront() {
 
 void SLinkedList::printLinkedList() const {
 	if (isEmpty()) {
-		cout << "입력된 데이터가 없습니다!!!\n" << endl;
-		return;
+				cout << "입력된 데이터가 없습니다!!!\n" << endl;
+				return;
 	}
 	SNode* tNode = head_;
 	while (tNode) {
